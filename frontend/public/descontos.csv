@@ -1,0 +1,5 @@
+rede_id,rede_desc,valor_desconto,produto_id,produto_livre,produto_desc,e01_id,grupo,tipo_desconto,a23_id,a23_desc
+10,Rede Sul,5.0,001,001,LEITE INTEGRAL 1L,,,produto,,
+10,Rede Sul,3.0,,,,G001,LATICÍNIOS,grupo,,
+15,Rede Norte,7.0,002,002,LEITE DESNATADO 1L,,,produto,,
+12,Rede Leste,4.0,,,,G001,LATICÍNIOS,grupo,,

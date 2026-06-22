@@ -1,0 +1,6 @@
+a00_id,a00_fantasia,rede_id,rede,canal_de_venda,segmento,a00_id_vend,vendedor,a00_id_vend_2,supervisor
+C001,Supermercado Silva,10,Rede Sul,Varejo,Alimentar,V001,João Silva,S001,Carlos Mendes
+C002,Mercadinho do Bairro,10,Rede Sul,Varejo,Alimentar,V001,João Silva,S001,Carlos Mendes
+C003,Atacadão Central,15,Rede Norte,Atacado,Alimentar,V002,Maria Santos,S002,Ana Paula
+C004,Padaria Pão Quente,NULL,Independente,Varejo,Alimentar,V001,João Silva,S001,Carlos Mendes
+C005,Loja Conveniência 24h,12,Rede Leste,Varejo,Alimentar,V003,Pedro Costa,S001,Carlos Mendes
