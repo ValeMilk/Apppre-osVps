@@ -27,7 +27,7 @@ export async function initDatabase() {
     console.log('✅ Conectado ao SQL Server');
   } catch (error) {
     console.error('❌ Erro ao conectar ao SQL Server:', error);
-    throw error;
+    console.warn('⚠️  SQL Server não disponível: Sistema funcionará apenas com dados do MongoDB');
   }
 }
 
