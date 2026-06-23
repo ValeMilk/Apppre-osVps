@@ -39,7 +39,7 @@ interface RequestFormProps {
   onClose: () => void;
 }
 
-export default function RequestForm({ user }: RequestFormProps) {
+export default function RequestForm({ user, onClose }: RequestFormProps) {
   const [modo, setModo] = useState<'cliente' | 'subrede'>('cliente');
   const [produtos, setProdutos] = useState<Produto[]>([]);
   const [clientes, setClientes] = useState<Cliente[]>([]);

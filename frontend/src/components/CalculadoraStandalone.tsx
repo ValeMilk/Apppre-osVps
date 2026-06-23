@@ -6,7 +6,7 @@ import {
   Typography,
   TextField,
   Button,
-  Grid,
+  Stack,
   IconButton,
 } from '@mui/material';
 import { Close, RestartAlt } from '@mui/icons-material';
@@ -154,61 +154,51 @@ export default function CalculadoraStandalone({ onClose }: CalculadoraStandalone
           Preencha 2 campos e os demais serão calculados automaticamente
         </Typography>
 
-        <Grid container spacing={2}>
-          <Grid item xs={12}>
-            <TextField
-              fullWidth
-              label="Custo (Preço de Custo)"
-              type="number"
-              value={custo}
-              onChange={(e) => calcular('custo', e.target.value)}
-              InputProps={{ inputProps: { step: '0.01' } }}
-            />
-          </Grid>
-          <Grid item xs={12}>
-            <TextField
-              fullWidth
-              label="Margem %"
-              type="number"
-              value={margem}
-              onChange={(e) => calcular('margem', e.target.value)}
-              InputProps={{ inputProps: { step: '0.01' } }}
-              helperText="(Lucro / Renda) × 100"
-            />
-          </Grid>
-          <Grid item xs={12}>
-            <TextField
-              fullWidth
-              label="Markup %"
-              type="number"
-              value={markup}
-              onChange={(e) => calcular('markup', e.target.value)}
-              InputProps={{ inputProps: { step: '0.01' } }}
-              helperText="(Lucro / Custo) × 100"
-            />
-          </Grid>
-          <Grid item xs={12}>
-            <TextField
-              fullWidth
-              label="Renda (Preço de Venda)"
-              type="number"
-              value={renda}
-              onChange={(e) => calcular('renda', e.target.value)}
-              InputProps={{ inputProps: { step: '0.01' } }}
-            />
-          </Grid>
-          <Grid item xs={12}>
-            <TextField
-              fullWidth
-              label="Lucro"
-              type="number"
-              value={lucro}
-              onChange={(e) => calcular('lucro', e.target.value)}
-              InputProps={{ inputProps: { step: '0.01' } }}
-              helperText="Renda - Custo"
-            />
-          </Grid>
-        </Grid>
+        <Stack spacing={2}>
+          <TextField
+            fullWidth
+            label="Custo (Preço de Custo)"
+            type="number"
+            value={custo}
+            onChange={(e) => calcular('custo', e.target.value)}
+            InputProps={{ inputProps: { step: '0.01' } }}
+          />
+          <TextField
+            fullWidth
+            label="Margem %"
+            type="number"
+            value={margem}
+            onChange={(e) => calcular('margem', e.target.value)}
+            InputProps={{ inputProps: { step: '0.01' } }}
+            helperText="(Lucro / Renda) × 100"
+          />
+          <TextField
+            fullWidth
+            label="Markup %"
+            type="number"
+            value={markup}
+            onChange={(e) => calcular('markup', e.target.value)}
+            InputProps={{ inputProps: { step: '0.01' } }}
+            helperText="(Lucro / Custo) × 100"
+          />
+          <TextField
+            fullWidth
+            label="Renda (Preço de Venda)"
+            type="number"
+            value={renda}
+            onChange={(e) => calcular('renda', e.target.value)}
+            InputProps={{ inputProps: { step: '0.01' } }}
+          />
+          <TextField
+            fullWidth
+            label="Lucro"
+            type="number"
+            value={lucro}
+            onChange={(e) => calcular('lucro', e.target.value)}
+            InputProps={{ inputProps: { step: '0.01' } }}
+            helperText="Renda - Custo"
+          />
+        </Stack>
 
         <Box sx={{ mt: 3, display: 'flex', gap: 2 }}>
           <Button
