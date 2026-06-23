@@ -5,17 +5,6 @@ services:
     build: ./backend
     restart: unless-stopped
     env_file: .env
-    environment:
-      NODE_ENV: production
-      PORT: 3002
-      MONGO_URI: ${MONGO_URI}
-      JWT_SECRET: ${JWT_SECRET}
-      CORS_ORIGIN: ${CORS_ORIGIN}
-      ERP_SERVER: ${ERP_SERVER}
-      ERP_PORT: ${ERP_PORT}
-      ERP_DATABASE: ${ERP_DATABASE}
-      ERP_USER: ${ERP_USER}
-      ERP_PASSWORD: ${ERP_PASSWORD}
     networks:
       - app-network
     ports:
