@@ -103,9 +103,39 @@ export const loadDescontos = (): Promise<Desconto[]> => {
       },
     });
   });
-};;
+};
 
-// Formatar preço para exibição
+// Calcular desconto aplicável (produto específico tem prioridade sobre grupo)
+export const calcularDesconto = (
+  produto: Produto,
+  cliente: Cliente,
+  descontos: Desconto[]
+): number => {
+  // Buscar desconto por produto específico
+  const descontoProduto = descontos.find(
+    (d) =>
+      d.tipo_desconto === 'produto' &&
+      d.produto_id === produto.e02_id &&
+      (d.rede_id === cliente.rede_id || d.a23_id === cliente.a00_id)
+  );
+
+  if (descontoProduto) {
+    return parseFloat(descontoProduto.valor_desconto) || 0;
+  }
+
+  // Buscar desconto por grupo
+  const descontoGrupo = descontos.find(
+    (d) =>
+      d.tipo_desconto === 'grupo' &&
+      d.rede_id === cliente.rede_id
+  );
+
+  if (descontoGrupo) {
+    return parseFloat(descontoGrupo.valor_desconto) || 0;
+  }
+
+  return 0;
+};
 export const formatarPreco = (preco: string | number): string => {
   const valor = typeof preco === 'string' ? parseFloat(preco) : preco;
   return valor.toLocaleString('pt-BR', {

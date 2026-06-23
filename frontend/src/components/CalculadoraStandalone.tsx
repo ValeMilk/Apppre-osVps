@@ -6,7 +6,7 @@ import {
   Typography,
   TextField,
   Button,
-  Grid,
+  Grid2,
   IconButton,
 } from '@mui/material';
 import { Close, RestartAlt } from '@mui/icons-material';
@@ -154,8 +154,8 @@ export default function CalculadoraStandalone({ onClose }: CalculadoraStandalone
           Preencha 2 campos e os demais serão calculados automaticamente
         </Typography>
 
-        <Grid container spacing={2}>
-          <Grid item xs={12}>
+        <Grid2 container spacing={2}>
+          <Grid2 xs={12}>
             <TextField
               fullWidth
               label="Custo (Preço de Custo)"
@@ -164,8 +164,8 @@ export default function CalculadoraStandalone({ onClose }: CalculadoraStandalone
               onChange={(e) => calcular('custo', e.target.value)}
               InputProps={{ inputProps: { step: '0.01' } }}
             />
-          </Grid>
-          <Grid item xs={12}>
+          </Grid2>
+          <Grid2 xs={12}>
             <TextField
               fullWidth
               label="Margem %"
@@ -175,8 +175,8 @@ export default function CalculadoraStandalone({ onClose }: CalculadoraStandalone
               InputProps={{ inputProps: { step: '0.01' } }}
               helperText="(Lucro / Renda) × 100"
             />
-          </Grid>
-          <Grid item xs={12}>
+          </Grid2>
+          <Grid2 xs={12}>
             <TextField
               fullWidth
               label="Markup %"
@@ -186,8 +186,8 @@ export default function CalculadoraStandalone({ onClose }: CalculadoraStandalone
               InputProps={{ inputProps: { step: '0.01' } }}
               helperText="(Lucro / Custo) × 100"
             />
-          </Grid>
-          <Grid item xs={12}>
+          </Grid2>
+          <Grid2 xs={12}>
             <TextField
               fullWidth
               label="Renda (Preço de Venda)"
@@ -196,8 +196,8 @@ export default function CalculadoraStandalone({ onClose }: CalculadoraStandalone
               onChange={(e) => calcular('renda', e.target.value)}
               InputProps={{ inputProps: { step: '0.01' } }}
             />
-          </Grid>
-          <Grid item xs={12}>
+          </Grid2>
+          <Grid2 xs={12}>
             <TextField
               fullWidth
               label="Lucro"
@@ -207,8 +207,8 @@ export default function CalculadoraStandalone({ onClose }: CalculadoraStandalone
               InputProps={{ inputProps: { step: '0.01' } }}
               helperText="Renda - Custo"
             />
-          </Grid>
-        </Grid>
+          </Grid2>
+        </Grid2>
 
         <Box sx={{ mt: 3, display: 'flex', gap: 2 }}>
           <Button
